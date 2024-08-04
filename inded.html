@@ -4,111 +4,84 @@
 <head>
     <title>Nami Lindquist</title>
     <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
     <style>
         html, body {
             height: 100%;
             margin: 0;
-            background: linear-gradient(to bottom, #ffd2e9, #fadfec, #f7eaf1, #fdfdfd);
+            background: #ffffff;
+            font-family: 'PT Serif', serif;
+            color: #333;
             display: flex;
             flex-direction: column;
+            align-items: center;
+            justify-content: center;
         }
 
-        body {
-            margin-top: 15pt;
-        }
-
-        h1 {
+        header {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: #ffffff;
+            border-bottom: 1px solid #eaeaea;
             text-align: center;
-            overflow: hidden; /* Ensures the content is hidden until it is revealed */
-            border-right: .15em solid black; /* Cursor style */
-            white-space: nowrap; /* Keeps the content on a single line */
-            margin: 0 auto; /* Centering */
-            animation: typing 3.5s steps(40, end), blink-caret .75s step-end infinite;
+            padding: 20px 0;
+            font-size: 2.25em;
+            font-weight: bold;
+            z-index: 1000;
             text-shadow: 0 0 5px #549ddd;
         }
 
-        @keyframes typing {
-            from { width: 0; }
-            to { width: 100%; }
-        }
-
-        @keyframes blink-caret {
-            from, to { border-color: transparent; }
-            50% { border-color: black; }
-        }
-
         h3 {
-            text-align: left;
-            white-space: nowrap; /* Keeps the content on a single line */
-            margin-top: 20pt;
-            margin-left: 20pt;
+            text-align: center;
+            margin: 20px;
+            font-size: 1.25em;
         }
 
         footer {
-            background-color: #9ecdf6;
-            color: black;
+            background-color: #ffffff;
+            color: #333;
             text-align: center;
             padding: 15px 0;
             margin-top: auto;
-            border-top: 2px solid black;
+            border-top: 1px solid #eaeaea;
+            width: 100%;
+            position: fixed;
+            bottom: 0;
         }
 
         a {
-            color: inherit; /* Ensures the link inherits the color from the parent element */
-            text-decoration: none; /* Removes the underline from the link */
+            color: #549ddd;
+            text-decoration: none;
         }
 
         a:hover {
-            text-decoration: none; /* Keeps the underline only on the specific word */
+            text-decoration: underline;
+        }
+
+        .content {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding-top: 100px; /* Increased space for larger fixed header */
+            padding-bottom: 40px; /* Space for fixed footer */
         }
     </style>
 </head>
 
 <body>
-    <div style="flex: 1;">
-        <h1>Nami Lindquist</h1>
+    <header>
+        Nami Lindquist
+    </header>
+    <div class="content">
         <h3>Check out my <a href="https://namilindquist.substack.com/"><u>Substack</u></a></h3>
         <h3><a href="https://namilindquist.substack.com/p/a-running-list-of-interesting-media"><u>A Running List of Interesting Media</u></a></h3>
-    </div>  
+    </div>
     <footer>Made on August 3rd, 2024 in NYC.</footer>
 </body>
 
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<!-- Typewriter, dark mode, ombre website background -->
-
-<!-- <script>
-    var i = 0;
-    var txt = 'Hi, my name is Nami Lindquist.';
-    var speed = 50;
-    
-    function typeWriter() {
-      if (i < txt.length) {
-        document.getElementById("demo").innerHTML += txt.charAt(i);
-        i++;
-        setTimeout(typeWriter, speed);
-      }
-    }
-    </script>
-    
