@@ -3,48 +3,78 @@
 
 <head>
     <title>Nami Lindquist</title>
+    
     <link rel="icon" type="image/x-icon" href="favicon.ico">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+
     <style>
         html, body {
             height: 100%;
             margin: 0;
-            background: #ffffff;
+            background: #f5f7fa;
             font-family: 'PT Serif', serif;
             color: #333;
             display: flex;
             flex-direction: column;
             align-items: center;
-            justify-content: center;
         }
 
         header {
             position: fixed;
             top: 0;
             width: 100%;
-            background: #ffffff;
+            background: linear-gradient(90deg, #e3ffe7 0%, #d9e7ff 100%);
             border-bottom: 1px solid #eaeaea;
             text-align: center;
-            padding: 20px 0;
+            padding: 15px;
             font-size: 2.25em;
             font-weight: bold;
             z-index: 1000;
-            text-shadow: 0 0 5px #549ddd;
+            white-space: nowrap;
+            overflow: hidden;
+            animation: typing 3.5s steps(40, end), blink-caret .75s step-end 3.5s;
+            border-right: .15em solid black;
+        }
+
+        @keyframes typing {
+            from { width: 0; }
+            to { width: 100%; }
+        }
+
+        @keyframes blink-caret {
+            from, to { border-color: transparent; }
+            50% { border-color: black; }
+        }
+
+        .content {
+            flex: 1;
+            width: 100%;
+            max-width: 800px;
+            padding-top: 100px;
+            padding-bottom: 40px;
+            margin: 0 auto;
+            text-align: left;
         }
 
         h3 {
-            text-align: center;
-            margin: 20px;
-            font-size: 1.25em;
+            margin: 20px 0;
+            font-size: 1.5em;
+            color: #2c3e50;
+            transition: color 0.3s;
+        }
+
+        h3:hover {
+            color: #3498db;
+            font-size: 160%;
         }
 
         footer {
-            background-color: #ffffff;
+            background-color: #e3ffe7;
             color: #333;
             text-align: center;
-            padding: 15px 0;
+            padding: 10px;
             margin-top: auto;
             border-top: 1px solid #eaeaea;
             width: 100%;
@@ -53,22 +83,110 @@
         }
 
         a {
-            color: #549ddd;
+            color: #3498db;
             text-decoration: none;
+            transition: color 0.3s, transform 0.3s;
         }
 
         a:hover {
             text-decoration: underline;
+            color: #2c3e50;
+            transform: scale(1.05);
         }
 
-        .content {
-            flex: 1;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            padding-top: 100px; /* Increased space for larger fixed header */
-            padding-bottom: 40px; /* Space for fixed footer */
+        p {
+            font-size: 1.1em;
+            line-height: 1.6;
+            margin: 20px 0;
+            text-align: justify;
+        }
+
+        .fa {
+            padding: 20px;
+            font-size: 20px;
+            width: 20px;
+            text-align: center;
+            text-decoration: none;
+            margin: 2px 2px;
+            border-radius: 50%;
+        }
+
+        .Indent {
+            margin-left: 20px;
+        }
+
+        ul {
+            padding-left: 20px;
+            color: #000000;
+        }
+
+        li {
+            margin: 10px 0;
+            list-style-type: none;
+            position: relative;
+        }
+
+        li::before {
+            content: "•";
+            color: #3498db;
+            font-weight: bold;
+            display: inline-block;
+            width: 1em;
+            margin-left: -1em;
+        }
+
+        .card {
+            background: #ffffff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin: 20px 0;
+            padding: 20px;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+
+        .card h3 {
+            margin-top: 0;
+        }
+
+        .quote {
+            font-style: italic;
+            color: #555;
+            position: relative;
+        }
+
+        .quote::before {
+            content: "“";
+            font-size: 2em;
+            color: #e3ffe7;
+            position: absolute;
+            left: -1.5em;
+            top: -0.5em;
+        }
+
+        .quote::after {
+            content: "”";
+            font-size: 2em;
+            color: #e3ffe7;
+            position: absolute;
+            right: -1.5em;
+            bottom: -0.5em;
+        }
+
+
+        .mouse-effect {
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            background-color: rgba(52, 152, 219, 0.5);
+            border-radius: 50%;
+            pointer-events: none;
+            transform: translate(-50%, -50%);
+            z-index: 9999;
         }
     </style>
 </head>
@@ -77,11 +195,63 @@
     <header>
         Nami Lindquist
     </header>
+
     <div class="content">
-        <h3>Check out my <a href="https://namilindquist.substack.com/"><u>Substack</u></a></h3>
-        <h3><a href="https://namilindquist.substack.com/p/a-running-list-of-interesting-media"><u>A Running List of Interesting Media</u></a></h3>
+        <div class="Intro card">
+            <h3>A little about me</h3>
+            <div class="Indent">
+                My name is Nami Lindquist and I'm a girl from Bellevue, WA. I love playing golf, rock climbing, trying different types of herbal teas, eating grilled octopus, listening to Whitney Houston, and biking around Philly. I study Computer Science and Economics at Penn's M&T program.
+            </div>
+        </div>
+
+        <div class="Writing card">
+            <h3>My writing</h3>
+            <ul>
+                <li><a href="https://namilindquist.substack.com/p/a-running-list-of-interesting-media"><u>Amazing things I've read that you should too</u></a></li>
+                <li>Check out my <a href="https://namilindquist.substack.com/"><u>Substack</u></a></li>
+            </ul>                
+        </div>
+
+        <div class="Reading card">
+            <h3>What I'm currently reading</h3>
+            <ul>
+                <li>The Price of Time: The Real Story of Interest</li>
+                <li>Secrets of Sand Hill Road</li>
+                <li>Podcast: <a href="https://www.thetwentyminutevc.com/"><u>20VC</u></a></li>
+            </ul>
+        </div>
+        
+        <div class="Projects card">
+            <h3>My projects</h3>
+            <ul>
+                <li><a href="https://www.pennhyperloop.org/"><u>Penn Hyperloop</u></a></li>
+                <li><a href="https://jiaxiaogabrielzhangee.github.io/AutoPlant.github.io/"><u>Autonomous Basil Plant</u></a></li>
+            </ul>    
+        </div>
+
+        <div class="Favorite quotes card">
+            <h3>Quotes I love</h3>
+            <ul>
+                <li class="quote"><i>"What would life be if we had no courage to attempt anything?"</i> — Vincent Van Gogh</li>
+                <li class="quote"><i>"You can't connect the dots looking forward; you can only connect them looking backwards. So you have to trust that the dots will somehow connect in your future."</i> — Steve Jobs</li>
+                <li class="quote"><i>“When a person can't find a deep sense of meaning, they distract themselves with pleasure.”</i> — Viktor Frankl</li>
+            </ul>    
+        </div>
     </div>
-    <footer>Made on August 3rd, 2024 in NYC.</footer>
+    
+    <footer>
+        Built on August 4th, 2024 in NYC 🗽.
+    </footer>
+
+    <div class="mouse-effect" id="mouseEffect"></div>
+
+    <script>
+        document.addEventListener('mousemove', function(e) {
+            var mouseEffect = document.getElementById('mouseEffect');
+            mouseEffect.style.left = e.pageX + 'px';
+            mouseEffect.style.top = e.pageY + 'px';
+        });
+    </script>
 </body>
 
 </html>
