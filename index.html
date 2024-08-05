@@ -3,7 +3,7 @@
 
 <head>
     <title>Nami Lindquist</title>
-
+    
     <link rel="icon" type="image/x-icon" href="favicon.ico">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -177,6 +177,7 @@
             bottom: -0.5em;
         }
 
+
         .mouse-effect {
             position: absolute;
             width: 20px;
@@ -186,26 +187,6 @@
             pointer-events: none;
             transform: translate(-50%, -50%);
             z-index: 9999;
-        }
-
-        .gallery {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 10px;
-            justify-content: center;
-        }
-
-        .gallery img {
-            width: 100%;
-            max-width: 200px;
-            border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            transition: transform 0.3s, box-shadow 0.3s;
-        }
-
-        .gallery img:hover {
-            transform: scale(1.05);
-            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
         }
     </style>
 </head>
@@ -239,7 +220,7 @@
                 <li>Podcast: <a href="https://www.thetwentyminutevc.com/"><u>20VC</u></a></li>
             </ul>
         </div>
-
+        
         <div class="Projects card">
             <h3>My projects</h3>
             <ul>
@@ -256,13 +237,21 @@
                 <li class="quote"><i>“When a person can't find a deep sense of meaning, they distract themselves with pleasure.”</i> — Viktor Frankl</li>
             </ul>    
         </div>
+    </div>
+    
+    <footer>
+        Built on August 4th, 2024 in NYC 🗽
+    </footer>
 
-        <div class="Gallery card">
-            <h3>Photo Gallery</h3>
-            <div class="gallery">
-                <img src="IMG_4027.JPEG" alt="Image 1">
-                <img src="IMG_4145.HEIC" alt="Image 2">
-                <img src="IMG_4266.JPEG" alt="Image 3">
-                <img src="IMG_4550.JPEG" alt="Image 4">
-            </div>
-        </div>
+    <div class="mouse-effect" id="mouseEffect"></div>
+
+    <script>
+        document.addEventListener('mousemove', function(e) {
+            var mouseEffect = document.getElementById('mouseEffect');
+            mouseEffect.style.left = e.pageX + 'px';
+            mouseEffect.style.top = e.pageY + 'px';
+        });
+    </script>
+</body>
+
+</html>
