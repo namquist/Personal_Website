@@ -34,7 +34,6 @@
             z-index: 1000;
             white-space: nowrap;
             overflow: hidden;
-            border-right: .15em solid black;
         }
 
         .content {
@@ -51,12 +50,6 @@
             margin: 20px 0;
             font-size: 1.5em;
             color: #2c3e50;
-            transition: color 0.3s;
-        }
-
-        h3:hover {
-            color: #3498db;
-            font-size: 160%;
         }
 
         footer {
@@ -88,20 +81,6 @@
             line-height: 1.6;
             margin: 20px 0;
             text-align: justify;
-        }
-
-        .fa {
-            padding: 20px;
-            font-size: 20px;
-            width: 20px;
-            text-align: center;
-            text-decoration: none;
-            margin: 2px 2px;
-            border-radius: 50%;
-        }
-
-        .Indent {
-            margin-left: 20px;
         }
 
         ul {
@@ -142,36 +121,31 @@
             margin-top: 0;
         }
 
-        .quote {
-            font-style: italic;
-            color: #555;
-            position: relative;
+        .about-container {
+            display: flex;
+            align-items: center;
         }
 
-        .quote::before {
-            content: "“";
-            font-size: 2em;
-            color: #e3ffe7;
-            position: absolute;
-            left: -1.5em;
-            top: -0.5em;
+        .about-image {
+            flex: 1;
+            margin-right: 20px;
         }
 
-        .quote::after {
-            content: "”";
-            font-size: 2em;
-            color: #e3ffe7;
-            position: absolute;
-            right: -1.5em;
-            bottom: -0.5em;
+        .about-image img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
         }
 
+        .about-text {
+            flex: 1.5;
+        }
 
         .mouse-effect {
             position: absolute;
             width: 20px;
             height: 20px;
-            background-color: rgba(52, 152, 219, 0.5);
+            background-color: rgb(255, 182, 221);
             border-radius: 50%;
             pointer-events: none;
             transform: translate(-50%, -50%);
@@ -188,42 +162,59 @@
     <div class="content">
         <div class="Intro card">
             <h3>A little about me</h3>
-            <div class="Indent">
-                My name is Nami Lindquist and I'm a girl from Bellevue, WA. I love playing golf, rock climbing, trying different types of herbal teas, eating grilled octopus, listening to Whitney Houston, and biking around Philly. I study Computer Science and Economics at Penn's M&T program.
+            <div class="about-container">
+                <div class="about-image">
+                    <img src="headshot.jpg" alt="Nami Lindquist" />
+                </div>
+                <div class="about-text">
+                    My name is Nami Lindquist and I'm a girl from Bellevue, WA. I love playing golf, rock climbing, trying different types of herbal teas, eating grilled octopus, listening to Whitney Houston, and biking around Philly. I study Computer Science and Economics at Penn's M&T program.
+                </div>
             </div>
         </div>
 
         <div class="Writing card">
             <h3>My writing</h3>
             <ul>
-                <li>Check out my <a href="https://namilindquist.substack.com/"><u>Substack</u></a></li>
-                <li>A list of <a href="https://namilindquist.substack.com/p/a-running-list-of-interesting-media"><u>amazing things I've read that you should too</u></a></li>
+                <li>Check out my <a href="https://namilindquist.substack.com/" target="_blank"><u>Substack</u></a></li>
+                <li>A list of <a href="https://namilindquist.substack.com/p/a-running-list-of-interesting-media" target="_blank"><u>amazing things I've read that you should too</u></a></li>
             </ul>                
-        </div>
-
-        <div class="Reading card">
-            <h3>What I'm currently reading</h3>
-            <ul>
-                <li>The Price of Time: The Real Story of Interest</li>
-                <li>Secrets of Sand Hill Road</li>
-                <li>Podcast: <a href="https://www.thetwentyminutevc.com/"><u>20VC</u></a></li>
-            </ul>
         </div>
         
         <div class="Projects card">
             <h3>My projects</h3>
             <ul>
-                <li><a href="https://www.pennhyperloop.org/"><u>Penn Hyperloop</u></a></li>
-                <li><a href="https://jiaxiaogabrielzhangee.github.io/AutoPlant.github.io/"><u>Autonomous Basil Plant</u></a></li>
+                <li><a href="https://www.pennhyperloop.org/" target="_blank"><u>Penn Hyperloop</u></a></li>
+                <li><a href="https://jiaxiaogabrielzhangee.github.io/AutoPlant.github.io/" target="_blank"><u>Autonomous Basil Plant</u></a></li>
+                <li><a href="https://github.com/namquist/Personal_Website" target="_blank"><u>This Website</u></a></li>
+                <li><a href="https://docs.google.com/presentation/d/1_U-NuF5nzryEed4ljrMGv5lJU4ULnF2-/edit?usp=sharing&ouid=108740676379647866178&rtpof=true&sd=true" target="_blank"><u>Alcohol Tools Swiss Army Knife: Swisskey</u></a></li>
+                <li><a href="https://www.udemy.com/user/nami-lindquist/" target="_blank"><u>Udemy Online Personal Finance Course</u></a></li>
+                <li><a href="https://www.amazon.com/stores/Nami-Lindquist/author/B08L9M47TV?ref=sr_ntt_srch_lnk_1&qid=1724945123&sr=8-1&isDramIntegrated=true&shoppingPortalEnabled=true" target="_blank"><u>Self-Help Book: Becoming Your Own Best Friend</u></a></li>                
             </ul>    
+        </div>
+
+        <div class="Reading card">
+            <h3>What I'm currently reading / listening to</h3>
+            <ul>
+                <li>The Price of Time: The Real Story of Interest</li>
+                <li>Secrets of Sand Hill Road</li>
+                <li>Podcast: <a href="https://www.thetwentyminutevc.com/" target="_blank"><u>20VC</u></a></li>
+            </ul>
         </div>
 
         <div class="Favorite quotes card">
             <h3>Quotes I love</h3>
             <ul>
-                <li class="quote"><i>"What would life be if we had no courage to attempt anything?"</i> — Vincent Van Gogh</li>
-                <li class="quote"><i>"You can't connect the dots looking forward; you can only connect them looking backwards. So you have to trust that the dots will somehow connect in your future."</i> — Steve Jobs</li>
-                <li class="quote"><i>“When a person can't find a deep sense of meaning, they distract themselves with pleasure.”</i> — Viktor Frankl</li>
+                <li><i>"What would life be if we had no courage to attempt anything?"</i> — Vincent Van Gogh</li>
+                <li><i>"You can't connect the dots looking forward; you can only connect them looking backwards. So you have to trust that the dots will somehow connect in your future."</i> — Steve Jobs</li>
+                <li><i>“When a person can't find a deep sense of meaning, they distract themselves with pleasure.”</i> — Viktor Frankl</li>
+            </ul>    
+        </div>
+
+        <div class="Contact card">
+            <h3>Contact</h3>
+            <ul>
+                <li>I love meeting new people! Feel free to reach me at <i>namilindquist@gmail.com</i></li>
+                <li><a href="https://www.linkedin.com/in/namilindquist/" target="_blank"><u>LinkedIn</u></a></li>
             </ul>    
         </div>
     </div>
