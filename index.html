@@ -151,6 +151,13 @@
             transform: translate(-50%, -50%);
             z-index: 9999;
         }
+
+        /* Hide mouse effect on small screens */
+        @media (max-width: 768px) {
+            .mouse-effect {
+                display: none;
+            }
+        }
     </style>
 </head>
 
@@ -226,11 +233,13 @@
     <div class="mouse-effect" id="mouseEffect"></div>
 
     <script>
-        document.addEventListener('mousemove', function(e) {
-            var mouseEffect = document.getElementById('mouseEffect');
-            mouseEffect.style.left = e.pageX + 'px';
-            mouseEffect.style.top = e.pageY + 'px';
-        });
+        if (window.innerWidth > 768) {
+            document.addEventListener('mousemove', function(e) {
+                var mouseEffect = document.getElementById('mouseEffect');
+                mouseEffect.style.left = e.pageX + 'px';
+                mouseEffect.style.top = e.pageY + 'px';
+            });
+        }
     </script>
 </body>
 
