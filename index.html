@@ -39,7 +39,7 @@
         .content {
             flex: 1;
             width: 100%;
-            max-width: 800px;
+            max-width: 900px;
             padding-top: 100px;
             padding-bottom: 40px;
             margin: 0 auto;
@@ -67,7 +67,7 @@
         a {
             color: #3498db;
             text-decoration: none;
-            transition: color 0.3s, transform 0.3s;
+            transition: color 0.3s;
         }
 
         a:hover {
@@ -76,16 +76,8 @@
             transform: scale(1.05);
         }
 
-        p {
-            font-size: 1.1em;
-            line-height: 1.6;
-            margin: 20px 0;
-            text-align: justify;
-        }
-
         ul {
             padding-left: 20px;
-            color: #000000;
         }
 
         li {
@@ -110,6 +102,7 @@
             margin: 20px 0;
             padding: 20px;
             transition: transform 0.3s, box-shadow 0.3s;
+            max-width: 100%;
         }
 
         .card:hover {
@@ -139,24 +132,6 @@
 
         .about-text {
             flex: 1.5;
-        }
-
-        .mouse-effect {
-            position: absolute;
-            width: 20px;
-            height: 20px;
-            background-color: rgb(255, 182, 221);
-            border-radius: 50%;
-            pointer-events: none;
-            transform: translate(-50%, -50%);
-            z-index: 9999;
-        }
-
-        /* Hide mouse effect on small screens */
-        @media (max-width: 768px) {
-            .mouse-effect {
-                display: none;
-            }
         }
     </style>
 </head>
@@ -229,18 +204,6 @@
     <footer>
         Built in August 2024 in NYC 🗽
     </footer>
-
-    <div class="mouse-effect" id="mouseEffect"></div>
-
-    <script>
-        if (window.innerWidth > 768) {
-            document.addEventListener('mousemove', function(e) {
-                var mouseEffect = document.getElementById('mouseEffect');
-                mouseEffect.style.left = e.pageX + 'px';
-                mouseEffect.style.top = e.pageY + 'px';
-            });
-        }
-    </script>
 </body>
 
 </html>
